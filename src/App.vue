@@ -1,56 +1,74 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-app-bar
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+      color="primary"
+      extension-height="200"
+      app
+      dark
+    >
+      <template v-slot:img="{ props }">
+        <v-img v-bind="props" gradient="to top right, #2196F3, #D500F9" />
+      </template>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+      <v-toolbar-title id="title">AMPirzadeh Numbers</v-toolbar-title>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <template v-slot:extension>
+        <v-row>
+          <v-col class="mx-auto" md="6" sm="12">
+            <v-text-field
+              outlined
+              type="number"
+              label="Search"
+              prepend-inner-icon="mdi-magnify"
+              v-model="$store.state.search"
+              @keypress.enter="$router.push($store.state.search)"
+              :rules="[rules.required, rules.min, rules.max]"
+            />
+          </v-col>
+        </v-row>
+      </template>
     </v-app-bar>
 
     <v-content>
-      <HelloWorld />
+      <v-container>
+        <router-view />
+      </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
-
-  components: {
-    HelloWorld
+  metaInfo: {
+    title: "AMPirzadeh",
+    titleTemplate: "%s | AMPirzadeh Numbers"
   },
-
-  data: () => ({
-    //
-  })
+  data() {
+    return {
+      rules: {
+        required: value => !!value || "Required",
+        max: value =>
+          eval(value) < Number.MAX_SAFE_INTEGER || "The number is too big",
+        min: value =>
+          eval(value) > Number.MIN_SAFE_INTEGER || "The number is too small"
+      }
+    };
+  }
 };
 </script>
+
+<style lang="scss" scoped>
+#title {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+.v-application {
+  background: #e3f2fd !important;
+}
+</style>

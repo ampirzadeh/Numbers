@@ -1,0 +1,10 @@
+{{ number }} is a {{ number > 0 ? "positive" : "negative" }}
+      {{ number % 2 == 0 ? "even" : "odd" }} {{ digit }}-digits number following
+      <router-link :to="(number - 1).toString()">
+        {{ number - 1 }}
+      </router-link>
+      and preceding
+      <router-link :to="(number + 1).toString()"> {{ number + 1 }} </router-link
+      >. The sum of its digits is {{ digitSum }}. It has a total of
+      {{ primeFact }}
+      prime factors and {{ divisors }} positive divisors.
