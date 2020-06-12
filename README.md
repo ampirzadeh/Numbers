@@ -1,8 +1,6 @@
 # AMP Numbers
 
-AMPirzadeh Numbers: Numbers information along with the number with different bases as well as geometrical shapes and more. Inspired by www.metanumbers.com
-
-Numbers' information.
+AMP Numbers: Numbers information along with the number with different bases as well as geometrical shapes and more. Inspired by www.metanumbers.com
 
 ## Project setup
 
