@@ -1,9 +1,13 @@
-# numbers
+# AMP Numbers
+
+AMPirzadeh Numbers: Numbers information along with the number with different bases as well as geometrical shapes and more. Inspired by www.metanumbers.com
+
+Numbers' information.
 
 ## Project setup
 
 ```
-npm install
+npm ci
 ```
 
 ### Compiles and hot-reloads for development

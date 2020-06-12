@@ -1,20 +1,22 @@
 <template>
   <v-container>
     <v-row>
-      <properties class="mx-auto mt-n12" style="z-index: 20" />
+      <number-summary class="mx-auto my-3" />
+      <basic-properties id="#properties" class="mx-auto my-3" />
     </v-row>
   </v-container>
 </template>
 
 <script>
-import properties from "../components/NumberInfo/properties";
+import numberSummary from "../components/NumberInfo/numberSummary";
+import basicProperties from "../components/NumberInfo/basicProperties";
 
 export default {
-  components: { properties },
+  components: { numberSummary, basicProperties },
   metaInfo() {
     return {
-      title: this.$route.params.number
+      title: this.$route.params.number,
     };
-  }
+  },
 };
 </script>

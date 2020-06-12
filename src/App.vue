@@ -20,6 +20,9 @@
           <v-col class="mx-auto" md="6" sm="12">
             <v-text-field
               outlined
+              name="search"
+              id="search"
+              autocomplete="off"
               type="number"
               label="Search"
               prepend-inner-icon="mdi-magnify"
@@ -45,19 +48,19 @@ export default {
   name: "App",
   metaInfo: {
     title: "AMPirzadeh",
-    titleTemplate: "%s | AMPirzadeh Numbers"
+    titleTemplate: "%s | AMPirzadeh Numbers",
   },
   data() {
     return {
       rules: {
-        required: value => !!value || "Required",
-        max: value =>
+        required: (value) => !!value || "Required",
+        max: (value) =>
           eval(value) < Number.MAX_SAFE_INTEGER || "The number is too big",
-        min: value =>
-          eval(value) > Number.MIN_SAFE_INTEGER || "The number is too small"
-      }
+        min: (value) =>
+          eval(value) > Number.MIN_SAFE_INTEGER || "The number is too small",
+      },
     };
-  }
+  },
 };
 </script>
 

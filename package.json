@@ -1,12 +1,18 @@
 {
-  "name": "numbers",
+  "name": "ampirzadeh-numbers",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "AMPirzadeh Numbers: Numbers information along with the number with different bases as well as geometrical shapes and more. Inspired by www.metanumbers.com",
+  "author": "AmirMohammad Pirzadeh <am.pirzadeh@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ampirzadeh/amp-numbers.git"
   },
   "dependencies": {
     "core-js": "^3.6.5",
