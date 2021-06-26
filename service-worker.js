@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/undefined/precache-manifest.c9185ae54aeac17e7366cfe8fdbf0570.js"
+  "/undefined/precache-manifest.87205b4534992fa5cfa83cab89bb10b6.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ampirzadeh-numbers"});
