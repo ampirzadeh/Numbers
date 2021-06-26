@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/undefined/precache-manifest.87205b4534992fa5cfa83cab89bb10b6.js"
+  "/undefined/precache-manifest.3ea35611e4e36189fbcd38c4300c68f5.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "ampirzadeh-numbers"});
+workbox.core.setCacheNameDetails({prefix: "numbers"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
