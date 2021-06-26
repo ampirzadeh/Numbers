@@ -1,9 +1,12 @@
 {
-  "name": "ampirzadeh-numbers",
+  "name": "numbers",
   "version": "0.1.0",
   "private": false,
   "description": "AMPirzadeh Numbers: Numbers information along with the number with different bases as well as geometrical shapes and more. Inspired by www.metanumbers.com",
-  "author": "AmirMohammad Pirzadeh <am.pirzadeh@gmail.com>",
+  "author": {
+    "email": "am.pirzadeh@gmail.com",
+    "name": "AmirMohammad Pirzadeh"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
